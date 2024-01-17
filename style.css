@@ -1,19 +1,43 @@
-*{
-    margin:0;
-    padding:0;
-    font-family:'Roboto', sans-serif;
-    
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(20, 177, 220, 0.922),rgba(241, 105, 162, 0.881)),url(images/background.jpg)
-    ;
-    background-position: center;
-    background-size: cover;
-    
 
- }
+body {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px;
+    background-attachment: fixed;
+    background: linear-gradient(rgba(20, 177, 220, 0.682), rgba(241, 105, 162, 0.679)),
+                url('images/background.jpg') center/cover;
+    position: relative;
+   
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115%;
+    pointer-events: none;
+    z-index: -1; /* Move the pseudo-element behind the body content */
+    background: inherit; /* Inherit the background from the body */
+    animation: pulsate 2.75s infinite alternate;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Your other styles below... */
 
  .center {
     display: block;
@@ -23,54 +47,153 @@
     padding-top: 7%;
     padding-bottom: 7%;
   }
+  .centeralt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    padding-top: 2%;
+   
+  }
 
   .center2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 75%;
     padding-top: 5%;
-    padding-bottom: 5%;
-  }
-  
- h2{color: rgb(62, 216, 234);
-    padding-top: 20%;
-    font-size: medium;}
+    padding-bottom: 4%;
+    opacity: 0;
+}
 
-    p{color: hsl(255, 92%, 95%);
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+  animation: fadeIn 2.7s forwards;
+}
+
+.center3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 10%;
+  padding-bottom: 7%;
+}
+
+
+
+ h2{ color: rgb(167, 246, 255);
+  padding-top: 3px;
+  padding-bottom: 30; /* Adjusted padding */
+  margin-bottom: 40px; /* Adjusted margin */
+  font-size: 13px;}
+
+    
+
+    p{color: hsl(0, 0%, 100%);
         padding-top: 15%;
+        margin-bottom: 50px;
+       
         font-size: medium;
         text-align: center;
         display: inline;
-        font-size: 21px;
+        
+        font-size: 22px;
         
         }
 
-    button {
-        color: rgb(238, 142, 218);
-        padding: 10px 7px;
+        #totalCompliments {
+          font-family: 'Roboto', sans-serif;
+          font-size: 13px;
+          color: #c204b2;
+          margin-top: 30px;
+          text-align: center;
+          position: absolute;
+          margin-bottom: 30px; 
+          padding-top: 30%;
+          padding-bottom: 1%;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 10px; /* Adjust the distance from the bottom as needed */
+      }
+
+      .badge-container {
+        display: flex;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 18px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        background-color: white;
-        ;
-        border: 2px solid #fe7ed1;
-        border-radius: 40px;
-      }
-        
-      button:hover {
-        background-color: hsl(254, 76%, 77%);
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative; /* Set position to relative */
+        padding-top: 10px;
+        margin-top: 20px;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        z-index: 1; /* Set z-index to create a stacking context */
+    }
+    
+    .badge {
+        border-radius: 50%;
+        width: 100px; /* Set a fixed width and height for the circular badge */
+        height: 100px;
+        margin: 5px;
+        margin-top: 40px;
+        overflow: hidden; /* Hide the overflow to create a perfect circle */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 2; /* Adjust the z-index as needed (greater than other elements) */
         color: white;
-      }
-      
+    }
+    
+    .badge::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(20, 177, 220, 0.5), rgba(241, 105, 162, 0.5)),
+                    url('images/badge.png') center/cover;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    
+
+ 
+.button-container {
+  text-align: center;
+  margin-bottom: 20px; /* Adjusted margin */
+}
+
+button {
+  color: rgb(238, 142, 218);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Change to block */
+  font-size: 18px;
+  margin: 4px auto; /* Center the button horizontally */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #fe7ed1;
+  border-radius: 40px;
+}
+
+button:hover {
+  background-color: hsl(254, 76%, 77%);
+  color: white;
+}
+
 button:active {
-    background-color: hsl(198, 100%, 73%);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-      
-  
+  background-color: hsl(198, 100%, 73%);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

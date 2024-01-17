@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ms. Love's Daily Motivation</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.1.4/lib/noty.css" />
+    <script src="https://cdn.jsdelivr.net/npm/noty@3.1.4/lib/noty.min.js"></script>
+    <!-- Include SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha256-KfXW1fAzhvHXQdkhpk0GTWGJjVvBJJq1QHzJCVu6mcI=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="header">
-   
-        <a href="https://fontmeme.com/lilo-stitch-font/">
-            <img src="https://fontmeme.com/permalink/240116/4cf91268dc892fcb06a84534da3f1343.png" alt="Ms. Loves Daily Motivation" class="center2" ></a> 
-        <a><img src="images/image.jpeg" alt="image" class="center"></a>
-   
-        <button id=myButton class="center" type="button">Click here for motivation </button>
-       
-        <p class="center2" id="displayText"></p>
 
-         <!-- Link to external JavaScript file -->
+    <a href="https://fontmeme.com/lilo-stitch-font/">
+        <img src="https://fontmeme.com/permalink/240116/4cf91268dc892fcb06a84534da3f1343.png"
+            alt="Ms. Loves Daily Motivation" class="center3"></a>
+    <a><img src="images/image.jpeg" alt="image" class="centeralt"></a>
+    <h2 style="text-align:center;">Made by Joe, for Roisin xo</h2>
+
+    <button id="myButton" class="center" type="button">Click here for motivation</button>
+
+    <p class="center2" id="displayText"></p>
+    <p id="totalCompliments" style="text-align: center;"></p>
+
+   
+
+    <!-- Badges container -->
+    <div id="badgesContainer" class="badge-container"></div>
+
+    <!-- Link to external JavaScript files -->
     <script src="script.js"></script>
+    <script src="counter.js"></script>
+    <script src="notification.js"></script>
 
-    <h2 style="text-align:center;"> Made by Joe, for Roisin xo</h2>
-    </section>
-    <embed src="/audio/audio.mp3" loop="true" autostart="true" width="1" height="1">
-    </audio>
 </body>
 
 </html>
-
-
