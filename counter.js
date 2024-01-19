@@ -1,7 +1,8 @@
+
+var totalComplimentsElement = document.getElementById('totalCompliments');
 document.addEventListener('DOMContentLoaded', function() {
     var myButton = document.getElementById('myButton');
     var displayText = document.getElementById('displayText');
-    var totalComplimentsElement = document.getElementById('totalCompliments');
     var badgesContainer = document.getElementById('badgesContainer');
 
     // Initialize total compliments and badges from local storage or set to 0
@@ -103,5 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
 
 //localStorage.clear();

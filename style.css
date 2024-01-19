@@ -85,6 +85,17 @@ body::before {
   padding-bottom: 7%;
 }
 
+.center4 {
+  display: none;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+color: rgb(217, 21, 207);
+background-color: aquamarine;
+border-style:dotted;
+margin-top: 100px;;
+}
 
 
  h2{ color: rgb(167, 246, 255);
@@ -121,6 +132,9 @@ body::before {
           transform: translateX(-50%);
           bottom: 10px; /* Adjust the distance from the bottom as needed */
       }
+
+      
+
 
       .badge-container {
         display: flex;

@@ -13,7 +13,7 @@ function setNotificationSeen() {
 // Function to show the notification
 function showNotification() {
     new Noty({
-        text: "Hi Roisin, Anytime you want some motivation, scan your keyring with your phone, click the button on-screen and smile :) You're going to be the best teacher and everyone is proud of you!- Your Nerdy BF, Joe xox  ",
+        text: "Hi Roisin, anytime you want some motivation, Scan your keyring, click the button and AI will generate a qoute. You're going to be the best teacher and everyone is proud of you!- Your Nerdy BF, Joe xox  ",
         type: 'information',
         layout: 'center',
         timeout: false,
